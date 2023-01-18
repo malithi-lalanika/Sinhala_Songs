@@ -1,0 +1,79 @@
+{
+  "settings": {
+      "index": {
+        "analysis": {
+          "analyzer": {
+            "sinhalaAnalyzer": {
+              "type": "custom",
+              "tokenizer": "icu_tokenizer"
+            }
+          },
+          "filter": {
+              "edgeNgram": {
+                "type": "edge_ngram",
+                "min_gram": 2,
+                "max_gram": 50,
+                "side": "front"
+              }
+            }
+        }
+      }
+    },
+  "mappings": {
+      "properties": {
+          "singer": {
+              "type": "text",
+              "analyzer": "sinhalaAnalyzer",
+              "search_analyzer": "standard"
+            },
+            "lyricist": {
+              "type": "text",
+              "analyzer": "sinhalaAnalyzer",
+              "search_analyzer": "standard"
+            },
+            "composer": {
+              "type": "text",
+              "analyzer": "sinhalaAnalyzer",
+              "search_analyzer": "standard"
+            },
+            "year": {
+              "type": "text"
+            },
+            "lyrics": {
+              "type": "text",
+              "analyzer": "sinhalaAnalyzer",
+              "search_analyzer": "standard"
+            },
+            "metaphors":{
+              "type": "nested",
+              "properties":{
+                  "metaphor": {
+                      "type": "text",
+                      "analyzer": "sinhalaAnalyzer",
+                      "search_analyzer": "standard"
+                    },
+                  "meaning": {
+                      "type": "text",
+                      "analyzer": "sinhalaAnalyzer",
+                      "search_analyzer": "standard"
+                    },
+                  "type": {
+                      "type": "text",
+                      "analyzer": "sinhalaAnalyzer",
+                      "search_analyzer": "standard"
+                    },
+                  "source_domain": {
+                      "type": "text",
+                      "analyzer": "sinhalaAnalyzer",
+                      "search_analyzer": "standard"
+                    },
+                  "target_domain": {
+                      "type": "text",
+                      "analyzer": "sinhalaAnalyzer",
+                      "search_analyzer": "standard"
+                    }
+              }
+          }
+      }
+  }
+}
