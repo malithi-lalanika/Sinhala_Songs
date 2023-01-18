@@ -9,7 +9,7 @@ true, but helps explain an idea or make a comparison. It generally compares two 
 generally not related or similar, but share a specific quality or characteristic that is emphasized 
 through the comparison. 
 
-
+![Search Engine](image.png)
 
 This repository contains the source code for a Sinhala Song Metaphor Search Engine developed using [ElasticSearch](https://www.elastic.co/) as the search engine and [NodeJS](https://nodejs.org/en/) and [React](https://reactjs.org/) as the web frameworks.
 
